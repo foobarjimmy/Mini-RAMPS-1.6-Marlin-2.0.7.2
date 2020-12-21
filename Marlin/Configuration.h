@@ -1115,9 +1115,9 @@
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
-#define X_HOME_DIR 1  ;-1 = min, 1 = max
-#define Y_HOME_DIR -1 ;-1 = min, 1 = max
-#define Z_HOME_DIR -1 ;-1 = min, 1 = max
+#define X_HOME_DIR 1   //-1 = min, 1 = max
+#define Y_HOME_DIR -1  //-1 = min, 1 = max
+#define Z_HOME_DIR -1  //-1 = min, 1 = max
 
 // @section machine
 
