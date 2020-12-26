@@ -620,10 +620,10 @@
 // Specify here all the endstop connectors that are connected to any endstop or probe.
 // Almost all printers will be using one per axis. Probes will use one or more of the
 // extra connectors. Leave undefined any used for non-endstop and non-probe purposes.
-//#define USE_XMIN_PLUG
+#define USE_XMIN_PLUG
 #define USE_YMIN_PLUG
 #define USE_ZMIN_PLUG
-#define USE_XMAX_PLUG
+//#define USE_XMAX_PLUG
 //#define USE_YMAX_PLUG
 //#define USE_ZMAX_PLUG
 
@@ -990,7 +990,7 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 20
+#define PROBING_MARGIN 0
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_SPEED 10000
@@ -1086,7 +1086,7 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false
+#define INVERT_X_DIR true
 #define INVERT_Y_DIR false
 #define INVERT_Z_DIR true
 
@@ -1115,19 +1115,19 @@
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
-#define X_HOME_DIR 1   //-1 = min, 1 = max
+#define X_HOME_DIR -1   //-1 = min, 1 = max
 #define Y_HOME_DIR -1  //-1 = min, 1 = max
 #define Z_HOME_DIR -1  //-1 = min, 1 = max
 
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 150
-#define Y_BED_SIZE 120
+#define X_BED_SIZE 140
+#define Y_BED_SIZE 110
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS 0
-#define Y_MIN_POS 0
+#define X_MIN_POS -15
+#define Y_MIN_POS -22
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
@@ -1390,8 +1390,8 @@
 #if ENABLED(Z_SAFE_HOMING)
 //  #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)  // X point for Z homing
 //  #define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 2)  // Y point for Z homing
-    #define Z_SAFE_HOMING_X_POINT 0  // (31,120) => Nut for homing
-    #define Z_SAFE_HOMING_Y_POINT 120 // (31,120) => Nut for homing
+    #define Z_SAFE_HOMING_X_POINT 84.6  //  => Nut for homing
+    #define Z_SAFE_HOMING_Y_POINT 2 //  => Nut for homing
 #endif
 
 // Homing speeds (mm/min)
